@@ -1,0 +1,21 @@
+{
+  "name": "heisice.github.io",
+  "homepage": "https://github.com/heisice/heisice.github.io",
+  "authors": [
+    "Ki-soo Kim <heisice@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1"
+  }
+}

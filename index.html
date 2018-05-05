@@ -1,18 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="utf-8">
     <title>Ki-soo Kim</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="bower_components/instafeed.js/instafeed.min.js"></script>
+
+	<!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->
+
+    <style type="text/css">
+    body {
+		-webkit-font-smoothing: antialiased;
+		-webkit-overflow-scrolling: touch;
+	    background-color: #ffffff;
+		font-weight: 400;
+		font-size: 14px;
+    }
+    .navbar-brand {
+		font-weight: 700;
+		font-size: 20px;
+		letter-spacing: 2px;
+		padding-bottom: 0;
+	}
+    .navbar {
+    	background-color: #1abc9c !important;
+    	border-bottom: 1px solid #16a085;
+    	font-family: 'Montserrat', sans-serif;
+    	text-transform: uppercase;
+    	padding: 10px 20px;
+    }
+    .navbar-nav {
+		margin-bottom: -2px;
+    }
+    #content {
+    	color: #333;
+		padding-top: 90px;
+		padding-bottom: 30px;
+		background-color: #f2f2f2;
+    }
+    #content h1 {
+	    font-size: 30px;
+	    font-weight: bold;
+	    margin-top: 30px;
+	    margin-bottom: 30px;
+    }
+    #profile_image {
+    	border-radius: 75px;
+    }
+    .centered {
+		text-align: center;
+    }
+    .description {
+		line-height: 28px;
+		margin-bottom: 25px;
+		font-size: 16px;
+    }
+    .uppercased {
+    	text-transform: uppercase;
+    }
+    .footer {
+    	background: #2f2f2f;
+    }
+    #links {
+    	margin: 0 auto;
+    	padding: 0;
+    	list-style: none;
+    }
+    #links li {
+		margin: 0;
+		padding: 0;
+		text-align: left;
+		display: inline-block;
+    }
+    #links li svg {
+    	position: relative;
+    	top: 2.5px;
+    }
+    #links li a {
+    	color: #333;
+    	padding: 0px 10px;
+    }
+	</style>
+
   </head>
   <body>
 
-  	<h1>Ki-soo Kim</h1>
+	<nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar1">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<a class="navbar-brand" href="/">Ki-soo Kim</a>
+		<div class="collapse navbar-collapse" id="navbar1">
+			<ul class="navbar-nav">
+			</ul>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="/">ABOUT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="http://blog.heisice.com">BLOG</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
 
-  	<img src="https://avatars0.githubusercontent.com/u/5591261?s=460&v=4"
-  		width="150" height="150" alt="Ki-soo Kim" />
+	<div id="content" class="centered">
 
-  	<h2>Software engineer</h2>
+	    	<div class="container">
 
+			  	<img id="profile_image" src="https://avatars0.githubusercontent.com/u/5591261?s=460&v=4"
+			  		width="150" height="150" alt="Ki-soo Kim" />
+
+			  	<h1>Ki-soo Kim</h1>
+
+			  	<p class="description uppercased">
+			  		Software engineer.
+			  	</p>
+
+			  	<p class="description uppercased">
+			  		Software development, electronic, firmware, automation, IoT
+			  	</p>
+
+			  	<p class="description">
+			  		<ul id="links">
+			  			<li><svg class="octicon octicon-mail" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 4v8c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1H1c-.55 0-1 .45-1 1zm13 0L7 9 1 4h12zM1 5.5l4 3-4 3v-6zM2 12l3.5-3L7 10.5 8.5 9l3.5 3H2zm11-.5l-4-3 4-3v6z"></path></svg><a href="mailto:heisice@gmail.com">heisice@gmail.com</a></li>
+			  			
+			  			<li><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg><a href="http://blog.heisice.com" target="_blank">http://blog.heisice.com</a></li>
+
+			  			<li><svg height="16" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><a href="https://github.com/heisice" target="_blank">https://github.com/heisice</a></li>
+
+			  			<li><svg height="16" viewBox="0 0 24 24"><path d="M0 7.334v8h6.666v1.332H12v-1.332h12v-8H0zm6.666 6.664H5.334v-4H3.999v4H1.335V8.667h5.331v5.331zm4 0v1.336H8.001V8.667h5.334v5.332h-2.669v-.001zm12.001 0h-1.33v-4h-1.336v4h-1.335v-4h-1.33v4h-2.671V8.667h8.002v5.331z"/><path d="M10.665 10H12v2.667h-1.335V10z"/></svg><a href="https://www.npmjs.com/~heisice" target="_blank">https://www.npmjs.com/~heisice</a></li>
+			  	</p>
+
+
+			  	<hr />
+
+			  	<div id="awesome"></div>
+
+			  	<script type="text/javascript">
+
+			  // 		function populateTable(xml, status) {
+
+			  // 			console.log(xml, status);
+
+			  // 		}
+			  		
+					// $.ajax({
+					// 	type: 'get',
+					// 	url: 'https://web.stagram.com/rss/n/heisice',
+					// 	dataType: 'xml',
+					// 	success: populateTable
+					// });
+
+					    var feed = new Instafeed({
+					        get: 'tagged',
+					        tagName: 'awesome',
+					        clientId: 'd0ccf302923449508bd6e9eca76caa3b',
+					        accessToken: '741841.d0ccf30.b1f2d8fdb1df403e8009d8bcc1beace5',
+					        template: '<a href="{{link}}"><img src="{{image}}" /></a>'
+					    });
+					    feed.run();
+					</script>
+
+
+
+			  	</script>
+				
+	  		</div>
+	  	</div>
+
+		<div id="footer">
+			<div class="container">
+			
+			</div>
+		</div>
+
+	</div>
 
   </body>
 </html>
